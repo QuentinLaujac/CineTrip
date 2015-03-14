@@ -16561,10 +16561,10 @@ Home = {
             centerPadding: '0',
             slidesToShow: 3,
             slide: "article.episode",
-            focusOnSelect: false,
+            focusOnSelect: true,
             arrows: true,
             infinite: true,
-            speed: 350,
+            speed: 500,
             cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
             onAfterChange: function(event, index) {
                 Home.initEpisodeBackground(index);
@@ -16605,7 +16605,7 @@ Home = {
                 PageLoader.pushState($a.attr('href'));
             };
         });
-        $('#episodes-carousel').on('mousewheel.carousel', {
+       $('#episodes-carousel').on('mousewheel.carousel', {
             mousewheel: {
                 debounce: {
                     leading: true,
@@ -16614,7 +16614,7 @@ Home = {
                 }
             }
         }, function(event) {
-            var $this = $(this),
+           /* var $this = $(this),
                 slide = null;
             current = Home.slickCarousel.slickCurrentSlide(), deltaFactor = event.deltaFactor, direction = event.deltaY > 0 ? 'next' : 'prev', increment = deltaFactor > 1 ? 50 : 1;
             if (direction == 'next') {
@@ -16631,7 +16631,7 @@ Home = {
             if ($this.data('scrollTimeout')) {
                 clearTimeout($this.data('scrollTimeout'));
             }
-          /*  $this.data('scrollTimeout', setTimeout(function() {
+            $this.data('scrollTimeout', setTimeout(function() {
                 $this.animate({
                     'margin-left': -275,
                     'margin-right': -275
