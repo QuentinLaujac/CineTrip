@@ -16561,7 +16561,7 @@ Home = {
             centerPadding: '0',
             slidesToShow: 3,
             slide: "article.episode",
-            focusOnSelect: true,
+            focusOnSelect: false,
             arrows: true,
             infinite: true,
             speed: 500,
@@ -16759,7 +16759,7 @@ Home = {
     episodeNavigator: function() {
         $("nav#episodes-navigator ul li a").on('click', function(event) {
             var index = $(this).parent().index();
-            Home.slickCarousel.slickGoTo(index);
+       //     Home.slickCarousel.slickGoTo(index);
             Home.activateEpisodeNavigator(this);
             event.preventDefault();
         });
