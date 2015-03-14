@@ -2295,19 +2295,7 @@ window.Modernizr = (function(window, document, undefined) {
             clearInterval(_.autoPlayTimer);
         }
         if (_.slideCount > _.options.slidesToShow && _.paused !== true) {
-<<<<<<< Updated upstream
             _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-//            _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
-=======
-            _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
->>>>>>> origin/master
-=======
-            _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
->>>>>>> origin/master
->>>>>>> Stashed changes
         }
     };
     Slick.prototype.autoPlayClear = function() {
@@ -5178,36 +5166,36 @@ window.Modernizr = (function(window, document, undefined) {
             0: 'Ti abbiamo inviato una mail di conferma',
             1: 'Per favore inserisci una mail',
             2: 'Un indirizzo valido contiene una sola @',
-            3: 'Il dominio della tua mail non √® valido (la porzione dopo la @: )',
-            4: 'Il nome della mail non √® valido (la porzione prima della @: )',
+            3: 'Il dominio della tua mail non è valido (la porzione dopo la @: )',
+            4: 'Il nome della mail non è valido (la porzione prima della @: )',
             5: 'L\'indirizzo email sembra finto o non valido: per favore inseriscine uno reale'
         },
         'de': {
             'submit': 'Senden...',
-            0: 'Wir haben Ihnen eine Best√§tigungs-E-Mail geschickt',
+            0: 'Wir haben Ihnen eine Bestätigungs-E-Mail geschickt',
             1: 'Bitte geben Sie Ihre E-Mail-Adresse ein',
             2: 'Eine E-Mail-Adresse muss ein @ enthalten',
-            3: 'Der Domain-Teil der E-Mail-Adresse ist ung√ºltig (der Teil nach dem @)',
-            4: 'Der Benutzername der E-Mail-Adresse ist ung√ºltig (der Teil vor dem @)',
-            5: 'Diese E-Mail-Adresse scheint gef√§lscht oder ung√ºltig zu sein. Bitte geben Sie eine echte E-Mail-Adresse an!'
+            3: 'Der Domain-Teil der E-Mail-Adresse ist ungültig (der Teil nach dem @)',
+            4: 'Der Benutzername der E-Mail-Adresse ist ungültig (der Teil vor dem @)',
+            5: 'Diese E-Mail-Adresse scheint gefälscht oder ungültig zu sein. Bitte geben Sie eine echte E-Mail-Adresse an!'
         },
         'es': {
-            'submit': 'Grabaci√≥n en curso...',
-            0: 'Te hemos enviado un email de confirmaci√≥n',
+            'submit': 'Grabación en curso...',
+            0: 'Te hemos enviado un email de confirmación',
             1: 'Por favor, introduzca un valor',
-            2: 'Una direcci√≥n de correo electr√≥nico debe contener una sola @',
-            3: 'La parte de dominio de la direcci√≥n de correo electr√≥nico no es v√°lida (la parte despu√©s de la @:)',
-            4: 'La parte de usuario de la direcci√≥n de correo electr√≥nico no es v√°lida (la parte antes de la @:)',
-            5: 'Esta direcci√≥n de correo electr√≥nico se ve falso o no v√°lido. Por favor, introduce una direcci√≥n de correo electr√≥nico real'
+            2: 'Una dirección de correo electrónico debe contener una sola @',
+            3: 'La parte de dominio de la dirección de correo electrónico no es válida (la parte después de la @:)',
+            4: 'La parte de usuario de la dirección de correo electrónico no es válida (la parte antes de la @:)',
+            5: 'Esta dirección de correo electrónico se ve falso o no válido. Por favor, introduce una dirección de correo electrónico real'
         },
         'fr': {
             'submit': 'Enregistrement en cours...',
-            0: 'Nous vous avons envoy√© un e-mail de confirmation',
-            1: 'S\'il vous pla√Æt entrer une valeur',
+            0: 'Nous vous avons envoyé un e-mail de confirmation',
+            1: 'S\'il vous plaît entrer une valeur',
             2: 'Une adresse e-mail doit contenir un seul @',
-            3: 'La partie domaine de l\'adresse e-mail n\'est pas valide (la partie apr√®s le @:)',
+            3: 'La partie domaine de l\'adresse e-mail n\'est pas valide (la partie après le @:)',
             4: 'La partie nom d\'utilisateur de l\'adresse email n\'est pas valide (la partie avant le signe @:)',
-            5: 'Cette adresse e-mail semble faux ou non valides. S\'il vous pla√Æt entrer une adresse email valide'
+            5: 'Cette adresse e-mail semble faux ou non valides. S\'il vous plaît entrer une adresse email valide'
         }
     };
 })(jQuery);;
@@ -16749,19 +16737,7 @@ Home = {
                 "width": "100%",
                 ease: Linear.easeNone,
                 onComplete: function() {
-<<<<<<< Updated upstream
         //            Home.slickCarousel.slickNext()
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    Home.slickCarousel.slickNext()
-=======
-        //            Home.slickCarousel.slickNext()
->>>>>>> origin/master
-=======
-        //            Home.slickCarousel.slickNext()
->>>>>>> origin/master
->>>>>>> Stashed changes
                 }
             });
         } else {
@@ -16769,19 +16745,7 @@ Home = {
                 "width": "100%",
                 ease: Linear.easeNone,
                 onComplete: function() {
-<<<<<<< Updated upstream
          //           Home.slickCarousel.slickNext()
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    Home.slickCarousel.slickNext()
-=======
-         //           Home.slickCarousel.slickNext()
->>>>>>> origin/master
-=======
-         //           Home.slickCarousel.slickNext()
->>>>>>> origin/master
->>>>>>> Stashed changes
                 }
             });
         }
