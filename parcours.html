@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <script type="text/javascript"
+  $(document).ready(function(){
+  //Check if the current URL contains '#'
+  if(document.URL.indexOf("#")==-1){
+      // Set the URL to whatever it was plus "#".
+      url = document.URL+"#";
+      location = "#";
+
+      //Reload the page
+      location.reload(true);
+  }
+});
+</script>
     <style type="text/css">
       html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
     </style>
+
     <script type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCB5J2rXIbNOzLT6svmc4AI4dKAt5qmmk">
     </script>
 
     <script type="text/javascript"
     src="parcours.js">
+
     </script>
 
   </head>
