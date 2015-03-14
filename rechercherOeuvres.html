@@ -51,6 +51,76 @@
 		  var s = document.getElementsByTagName('script')[0];
 		  s.parentNode.insertBefore(wf, s);
 		})();
+		
+		window.onload = function(){
+			var motsClefs = [
+				'Bienvenue chez les Chtis',
+				'Game of Thrones',
+				'Le parrain',
+				'Intouchables',
+				'Le seigneur des anneaux',
+				'Le roi lion',
+				'Inception',
+				'Gladiator',
+				'Le roi lion',
+				'Gandhi',
+				'Babar',
+				'Batman',
+				'Rien à déclarer',
+				'Bienvenue parmi nous',
+				'Bienvenue à mooseport',
+				'Bienvenue en enfer'
+			];
+			
+			var form = document.getElementById("auto-suggest");
+			var input = form.search;
+			
+			var list = document.createElement("ul");
+			list.className = "suggestions";
+			list.style.display = "none";
+
+			form.appendChild(list);
+
+			input.onkeyup = function(){
+				var txt = this.value;
+				if(!txt){
+					list.style.display = "none";
+				    return;
+				}
+				
+				var suggestions = 0;
+				var frag = document.createDocumentFragment();
+				
+				for(var i = 0, c = motsClefs.length; i < c; i++){
+					if(new RegExp("^"+txt,"i").test(motsClefs[i])){
+						var word = document.createElement("li");
+						frag.appendChild(word);
+						word.innerHTML = motsClefs[i].replace(new RegExp("^("+txt+")","i"),"<strong>$1</strong>");
+						word.mot = motsClefs[i];
+						word.onmousedown = function(){					
+							input.focus();
+							input.value = this.mot;
+							list.style.display = "none";
+							return false;
+						};				
+						suggestions++;
+					}
+				}
+
+				if(suggestions){
+					list.innerHTML = "";
+					list.appendChild(frag);
+					list.style.display = "block";
+				}
+				else {
+					list.style.display = "none";			
+				}
+			};
+
+			input.onblur = function(){
+				list.style.display = "none";	
+			};
+		};
 		</script>
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -68,9 +138,9 @@
 				<div class="relative-inner">
 					
 					<h1 id="brand">
-						<a href="index.html" data-pjax title="Accueil">CineTrip <!--<i class="icon-logo-ouisurf">  --></i></a>
+						<a href="index.html" data-pjax title="Accueil">CineTrip <!--<i class="icon-logo-ouisurf">  </i>--></a>
 					</h1>	
-			
+					
 					<nav class="sharer hidden-xs" >
 				<h4>Partagez</a></h4>
 				<div class="links">
@@ -88,7 +158,9 @@
 				</div>
 			</header>
 	
-	
+			<form id="auto-suggest" style="height:110px;padding-top:23px;" action="#" method="post">
+						<input type="text" class="search" name="search" value="Rechercher..." onfocus="if(this.value=='Rechercher...')this.value=''" onblur="if(this.value=='')this.value='Rechercher...'" autocomplete="off"/>
+			</form>
 			<nav id="site-nav" class="container-fluid">	
 				<div class="row auto-height">		
 					<div class="col-sm-8 episodes-list auto-height hidden-xs">
