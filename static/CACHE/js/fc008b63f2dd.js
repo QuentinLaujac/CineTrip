@@ -2295,7 +2295,19 @@ window.Modernizr = (function(window, document, undefined) {
             clearInterval(_.autoPlayTimer);
         }
         if (_.slideCount > _.options.slidesToShow && _.paused !== true) {
+<<<<<<< Updated upstream
+            _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 //            _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
+=======
+            _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
+>>>>>>> origin/master
+=======
+            _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
+>>>>>>> origin/master
+>>>>>>> Stashed changes
         }
     };
     Slick.prototype.autoPlayClear = function() {
@@ -16737,7 +16749,19 @@ Home = {
                 "width": "100%",
                 ease: Linear.easeNone,
                 onComplete: function() {
+<<<<<<< Updated upstream
+        //            Home.slickCarousel.slickNext()
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
                     Home.slickCarousel.slickNext()
+=======
+        //            Home.slickCarousel.slickNext()
+>>>>>>> origin/master
+=======
+        //            Home.slickCarousel.slickNext()
+>>>>>>> origin/master
+>>>>>>> Stashed changes
                 }
             });
         } else {
@@ -16745,7 +16769,19 @@ Home = {
                 "width": "100%",
                 ease: Linear.easeNone,
                 onComplete: function() {
+<<<<<<< Updated upstream
+         //           Home.slickCarousel.slickNext()
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
                     Home.slickCarousel.slickNext()
+=======
+         //           Home.slickCarousel.slickNext()
+>>>>>>> origin/master
+=======
+         //           Home.slickCarousel.slickNext()
+>>>>>>> origin/master
+>>>>>>> Stashed changes
                 }
             });
         }
