@@ -16610,13 +16610,13 @@ Home = {
                 debounce: {
                     leading: true,
                     trailing: false,
-                    maxDelay: 999999
+                    maxDelay: 2500
                 }
             }
         }, function(event) {
             var $this = $(this),
                 slide = null;
-            current = Home.slickCarousel.slickCurrentSlide(), deltaFactor = event.deltaFactor, direction = event.deltaY > 0 ? 'next' : 'prev', increment = deltaFactor > 1 ? 50 : 1;
+      //      current = Home.slickCarousel.slickCurrentSlide(), deltaFactor = event.deltaFactor, direction = event.deltaY > 0 ? 'next' : 'prev', increment = deltaFactor > 1 ? 50 : 1;
             if (direction == 'next') {
                 slide = current + 1;
                 $this.stop().animate({
