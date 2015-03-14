@@ -2295,7 +2295,7 @@ window.Modernizr = (function(window, document, undefined) {
             clearInterval(_.autoPlayTimer);
         }
         if (_.slideCount > _.options.slidesToShow && _.paused !== true) {
-//            _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
+            _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
         }
     };
     Slick.prototype.autoPlayClear = function() {
@@ -16737,7 +16737,7 @@ Home = {
                 "width": "100%",
                 ease: Linear.easeNone,
                 onComplete: function() {
-                    Home.slickCarousel.slickNext()
+        //            Home.slickCarousel.slickNext()
                 }
             });
         } else {
@@ -16745,7 +16745,7 @@ Home = {
                 "width": "100%",
                 ease: Linear.easeNone,
                 onComplete: function() {
-                    Home.slickCarousel.slickNext()
+         //           Home.slickCarousel.slickNext()
                 }
             });
         }
