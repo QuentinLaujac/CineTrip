@@ -16616,7 +16616,7 @@ Home = {
         }, function(event) {
             var $this = $(this),
                 slide = null;
-      //      current = Home.slickCarousel.slickCurrentSlide(), deltaFactor = event.deltaFactor, direction = event.deltaY > 0 ? 'next' : 'prev', increment = deltaFactor > 1 ? 50 : 1;
+            current = Home.slickCarousel.slickCurrentSlide(), deltaFactor = event.deltaFactor, direction = event.deltaY > 0 ? 'next' : 'prev', increment = deltaFactor > 1 ? 50 : 1;
             if (direction == 'next') {
                 slide = current + 1;
                 $this.stop().animate({
@@ -16631,7 +16631,7 @@ Home = {
             if ($this.data('scrollTimeout')) {
                 clearTimeout($this.data('scrollTimeout'));
             }
-            $this.data('scrollTimeout', setTimeout(function() {
+          /*  $this.data('scrollTimeout', setTimeout(function() {
                 $this.animate({
                     'margin-left': -275,
                     'margin-right': -275
@@ -16641,7 +16641,7 @@ Home = {
                 } else {
                     Home.slickCarousel.slickPrev();
                 }
-            }, 250));
+            }, 250));*/
         });
     },
     keyboardEvents: function() {
