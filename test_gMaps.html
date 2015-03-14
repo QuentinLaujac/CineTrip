@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+		</style>
+		<style type="text/css">
+		   .labels {
+			 color: white;
+			 background-color: red;
+			 font-family: "Lucida Grande", "Arial", sans-serif;
+			 font-size: 10px;
+			 text-align: center;
+			 width: 100px;     
+			 white-space: nowrap;
+		   }
+		 </style>
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCB5J2rXIbNOzLT6svmc4AI4dKAt5qmmk">
+		</script>
+		<script type="text/javascript">
+			var map;
+			var marqueurs = [];
+			
+			function initialize() {
+				var mapOptions = {
+					center: { lat: 50.701200, lng: 3.158245},
+					zoom: 8
+				};
+				map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+			}
+			
+			function addPath(tab){
+				var traceParcoursBus = new google.maps.Polyline({
+					path: tab,//chemin du tracé
+					strokeColor: "#FF0000",//couleur du tracé
+					strokeOpacity: 1.0,//opacité du tracé
+					strokeWeight: 2//grosseur du tracé
+				});
+				
+				//lier le tracé à la carte
+				//ceci permet au tracé d'être affiché sur la carte
+				traceParcoursBus.setMap(map);
+				
+				for (var i=0; i<tab.length; i++) {
+					var image = 'c2.jpg';
+					marqueurs.push(new google.maps.Marker({
+						position: tab[i],
+						map: map,
+						icon: image
+					}));
+				}
+				
+			}
+			
+			function testAddPath(){
+				var parcoursBus = [
+					new google.maps.LatLng(46.781367900048, 6.6401992834884),
+					new google.maps.LatLng(46.780821285011, 6.6416348016222),
+					new google.maps.LatLng(46.780496546047, 6.6421830461926),
+					new google.maps.LatLng(46.779835306991, 6.6426765713417),
+					new google.maps.LatLng(46.777748677169, 6.6518819126808),
+					new google.maps.LatLng(46.778027878803, 6.6541349682533),
+					new google.maps.LatLng(46.778484884759, 6.6557324922045),
+					new google.maps.LatLng(46.778752327087, 6.6573654211838),
+					new google.maps.LatLng(20.778605381016, 40.6588674582321)
+				];
+				addPath(parcoursBus);
+			}
+			
+			function move(){
+				var longitude;
+				var latitude;
+				
+				latitude = parseFloat(document.getElementById("txtlat").value);
+				longitude = parseFloat(document.getElementById("txtlong").value);
+				
+				if(!isNaN(latitude) && !isNaN(longitude)){
+					map.setCenter(new google.maps.LatLng(latitude, longitude));
+				}
+				
+				testAddPath();
+			}
+			
+			google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
+	</head>
+	<body>
+		<label for="txtlat">Latitude :</label>
+		<input type="text" name="txtlat" id="txtlat" />
+		<label for="txtlong">Longitude :</label>
+		<input type="text" name="txtlong" id="txtlong" />
+		<button onClick="move()"> go ! </button>
+		<div id="map-canvas"></div>
+	</body>
+</html>
