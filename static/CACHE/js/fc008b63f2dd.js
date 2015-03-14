@@ -2295,7 +2295,7 @@ window.Modernizr = (function(window, document, undefined) {
             clearInterval(_.autoPlayTimer);
         }
         if (_.slideCount > _.options.slidesToShow && _.paused !== true) {
-            _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
+//            _.autoPlayTimer = setInterval(_.autoPlayIterator, _.options.autoplaySpeed);
         }
     };
     Slick.prototype.autoPlayClear = function() {
@@ -16564,7 +16564,7 @@ Home = {
             focusOnSelect: false,
             arrows: true,
             infinite: true,
-            speed: 500,
+            speed: 350,
             cssEase: "cubic-bezier(0.645, 0.045, 0.355, 1.000)",
             onAfterChange: function(event, index) {
                 Home.initEpisodeBackground(index);
@@ -16605,7 +16605,7 @@ Home = {
                 PageLoader.pushState($a.attr('href'));
             };
         });
-       $('#episodes-carousel').on('mousewheel.carousel', {
+        $('#episodes-carousel').on('mousewheel.carousel', {
             mousewheel: {
                 debounce: {
                     leading: true,
@@ -16614,7 +16614,7 @@ Home = {
                 }
             }
         }, function(event) {
-           /* var $this = $(this),
+            var $this = $(this),
                 slide = null;
             current = Home.slickCarousel.slickCurrentSlide(), deltaFactor = event.deltaFactor, direction = event.deltaY > 0 ? 'next' : 'prev', increment = deltaFactor > 1 ? 50 : 1;
             if (direction == 'next') {
@@ -16641,7 +16641,7 @@ Home = {
                 } else {
                     Home.slickCarousel.slickPrev();
                 }
-            }, 250));*/
+            }, 250));
         });
     },
     keyboardEvents: function() {
@@ -16759,7 +16759,7 @@ Home = {
     episodeNavigator: function() {
         $("nav#episodes-navigator ul li a").on('click', function(event) {
             var index = $(this).parent().index();
-       //     Home.slickCarousel.slickGoTo(index);
+            Home.slickCarousel.slickGoTo(index);
             Home.activateEpisodeNavigator(this);
             event.preventDefault();
         });
