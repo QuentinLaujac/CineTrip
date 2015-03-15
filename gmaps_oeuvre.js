@@ -3,7 +3,7 @@ var marqueurs = [];
 var marqueurs_nearMe = [];
 var marqueur_myPos;
 var parcours = [];
-var bclc_marqueurs = []
+var bclc_marqueurs = [];
 // var lat = marqueur_myPos.getPosition().lat();
 // var lng = marqueur_myPos.getPosition().lng();
 
@@ -327,7 +327,7 @@ function bclc_addMarkers(){
 		iw6.open(map, bclc_marqueurs[i6]);
 	});
 	
-	addPath(bclc_marqueurs);
+	//addPath(bclc_marqueurs);
 }
 
 function initialize() {
