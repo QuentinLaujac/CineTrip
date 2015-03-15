@@ -4,6 +4,7 @@
   var marqueurs_nearMe = [];
   var marqueur_myPos;
   var parcours = [];
+  var infoPopups = [];
   // var lat = marqueur_myPos.getPosition().lat();
   // var lng = marqueur_myPos.getPosition().lng();
 
@@ -268,13 +269,17 @@
               '<p><b>Ma position</b></p>' +
               '</div>'+
               '</div>';
-    infowindow = new google.maps.InfoWindow({
+    var infowindow = new google.maps.InfoWindow({
         content: contentString
     });
 
     google.maps.event.addListener(marqueur_myPos, 'click', function() {
+		for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
       infowindow.open(map, marqueur_myPos);
     });
+	infoPopups.push(infowindow);
     geolocaliseUser();
   }
 
@@ -285,14 +290,14 @@
 
   function addPath(tab){
     var traceParcoursBus = new google.maps.Polyline({
-      path: tab,//chemin du trac�
-      strokeColor: "#FF0000",//couleur du trac�
-      strokeOpacity: 1.0,//opacit� du trac�
-      strokeWeight: 2//grosseur du trac�
+      path: tab,//chemin du trace
+      strokeColor: "#FF0000",//couleur du trace
+      strokeOpacity: 1.0,//opacite du trace
+      strokeWeight: 2//grosseur du trace
     });
 
-    //lier le trac� � la carte
-    //ceci permet au trac� d'�tre affich� sur la carte
+    //lier le trace a la carte
+    //ceci permet au trace d'etre affiche sur la carte
     traceParcoursBus.setMap(map);
 
     /*for (var i=0; i<tab.length; i++) {
@@ -341,7 +346,7 @@
     marqueur_myPos.setMap(map);
     //setTimeout("map.setZoom(12)", 1000);
     if(!localise){localise=true;
-      nearMe(50);}
+      nearMe(150);}
   }
 
     function panToMe(){
