@@ -1,35 +1,152 @@
 <!DOCTYPE html>
-<html>
-  <head>
-  <script type="text/javascript">
-  $(document).ready(function(){
-  //Check if the current URL contains '#'
-  if(document.URL.indexOf("#")==-1){
-      // Set the URL to whatever it was plus "#".
-      url = document.URL+"#";
-      location = "#";
+<html lang="fr">
+	<head>
+		<style type="text/css">
+			html, body, #map-canvas { height: 100vh; margin: 0; padding: 0;}
+		</style>
 
-      //Reload the page
-      location.reload(true);
-  }
-});
-</script>
-    <style type="text/css">
-      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
-    </style>
+		<script type="text/javascript"
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCB5J2rXIbNOzLT6svmc4AI4dKAt5qmmk">
+		</script>
 
-    <script type="text/javascript"
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCB5J2rXIbNOzLT6svmc4AI4dKAt5qmmk">
-    </script>
+		<script type="text/javascript"
+			src="parcours.js">
+		</script>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
+		<!--
+		DEBUG: False
+		HOSTNAME: localhost
+		NOW: 13 mars 2015 18:42:41
+		-->
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>CineTrip</title>
 
-    <script type="text/javascript"
-		src="parcours.js">
-    </script>
 
-  </head>
-  <body>
-	<button onClick="panToMe()"> recentrer </button>
-	<button onClick="drawParcours()"> afficher parcours </button>
-    <div id="map-canvas"></div>
-  </body>
+		<meta property="og:title" content="cineTrip ">
+		<meta property="og:site_name" content="cineTrip">
+		<meta property="og:locale" content="fr_fr">
+
+		<meta property="og:image" content="http://ouisurf.tv/static/images/share-image.png?v=2" />
+
+
+		<link rel="stylesheet" href="static/CACHE/css/37a0890be3d0.css" type="text/css" media="screen" />
+
+		<script>
+			STATIC_URL = "/static/";
+			MEDIA_URL = "/media/";
+			BASE_TITLE = "cineTrip";
+			MOBILE_BREAKPOINT = 728;
+		</script>
+
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//Check if the current URL contains '#'
+			if(document.URL.indexOf("#")==-1){
+				// Set the URL to whatever it was plus "#".
+				url = document.URL+"#";
+				location = "#";
+
+				//Reload the page
+				location.reload(true);
+			}
+		});
+	</script>
+	<body class="fr  bg-check">
+		<div id="main">
+
+			<header id="site-header" data-midnight="dark-background">
+				<div class="relative-inner">
+
+					<h1 id="brand">
+						<a href="index.html" title="Accueil">CineTrip <!--<i class="icon-logo-ouisurf">  --></i></a>
+					</h1>
+
+					<nav class="sharer hidden-xs" >
+				<h4>Partagez</a></h4>
+				<div class="links">
+					<a href="https://www.facebook.com/sharer/sharer.php" class="circle-fa facebook-share" target="_blank"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/intent/tweet" class="circle-fa twitter-share" target="_blank"><i class="fa fa-twitter"></i></a>
+				</div>
+			</nav>
+
+					<nav id="schedule-evasion" class="hidden-xs">
+						<h3 class="bold">Tous les mardis 21h sur <a href="http://www.evasion.tv" target="_blank" class="gold"><i class="icon-logo-evasion"></i></a></h3>
+					</nav>
+
+					<a id="trigger-nav" class="no-smoothstate"><div class="relative-inner"><span></span></div></a>
+
+				</div>
+			</header>
+
+
+			<nav id="site-nav" class="container-fluid">
+				<div class="row auto-height">
+					<div class="col-sm-8 episodes-list auto-height hidden-xs">
+					</div>
+
+
+					<div class="col-sm-4 navigation auto-height">
+						<div class="bottom">
+							<header class="main-nav">
+								<ul class="unstyled">
+									<li><a href="rechercherOeuvres.html" data-pjax title="Épisodes">Trouver un voyage</a></li>
+									<li><a href="" data-pjax title="Épisodes">Voir les meilleurs trips</a></li>
+									<li><a href="autourmoi.html" data-pjax title="Autour de moi">Autour de moi</a></li>
+									<li><a href="" data-pjax title="Musique">Vu recemment</a></li>
+									<li><a href="parcours.html" data-pjax title="cineTrip">Créer un parcours</a></li>
+									<li><a href="" data-pjax title="cineTrip">Mes parcours</a><h5 class="mono gold">1 parcours</h5></li>
+								</ul>
+							</header>
+
+							<footer class="social-links">
+								<h4 class="mono">Nous suivre</h4>
+								<ul class="unstyled">
+									<li>
+										<a href="https://www.facebook.com/pages/OuiSurfca/218859584121" target="_blank"><i class="fa fa-facebook"></i></a>
+										<a href="https://twitter.com/Ouisurf" target="_blank"><i class="fa fa-twitter"></i></a>
+										<a href="http://instagram.com/ouisurf" target="_blank"><i class="fa fa-instagram"></i></a>
+										<a href="https://soundcloud.com/ouisurf" target="_blank"><i class="fa fa-soundcloud"></i></a>
+									</li>
+								</ul>
+							</footer>
+
+							<footer class="credits">
+								<h5 class="mono">2015 CineTrip. Tous droits réservés</h5>
+							</footer>
+						</div>
+					</div>
+
+				</div>
+			</nav>
+			<button onClick="panToMe()"> recentrer </button>
+			<button onClick="drawParcours()"> afficher parcours </button>
+			<div id="map-canvas"></div>
+			<div id="page-loader">
+				<div class="relative-inner">
+					<header class="logo vertical-centered">
+						<h1 class="bold uppercase">cineTrip</h1>
+						<figure id="progress-circle"></figure>
+					</header>
+				</div>
+			</div>
+
+			<script src="static/vendors/jquery/dist/jquery.min.js"></script>
+			<script src="static/vendors/jquery.migrate/jquery-migrate-1.2.1.min.js"></script>
+			<script type="text/javascript" src="static/CACHE/js/fc008b63f2dd.js"></script>
+		
+		</div>
+	</body>
 </html>
