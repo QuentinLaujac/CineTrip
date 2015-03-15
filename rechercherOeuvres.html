@@ -161,10 +161,17 @@
 					<a href="https://twitter.com/intent/tweet" class="circle-fa twitter-share" target="_blank"><i class="fa fa-twitter"></i></a>
 				</div>
 			</nav>
+
 					<a id="trigger-nav" class="no-smoothstate"><div class="relative-inner"><span></span></div></a>
 
 				</div>
 			</header>
+		<header>
+
+			<form id="auto-suggest" style="height:110px;padding-top:23px;" action="#" method="post">
+						<input type="text" class="search" name="search" value="Rechercher..." onfocus="if(this.value=='Rechercher...')this.value=''" onblur="if(this.value=='')this.value='Rechercher...'" autocomplete="off"/>
+			</form>
+		</header>
 
 
 			<nav id="site-nav" class="container-fluid">
