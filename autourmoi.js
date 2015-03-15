@@ -346,7 +346,7 @@
     marqueur_myPos.setMap(map);
     //setTimeout("map.setZoom(12)", 1000);
     if(!localise){localise=true;
-      nearMe(150);}
+      nearMe(5050);}
   }
 
     function panToMe(){
