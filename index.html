@@ -39,7 +39,19 @@
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
 	</head>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//Check if the current URL contains '#'
+			if(document.URL.indexOf("#")==-1){
+				// Set the URL to whatever it was plus "#".
+				url = document.URL+"#";
+				location = "#";
 
+				//Reload the page
+				location.reload(true);
+			}
+		});
+	</script>
 	<body class="fr  bg-check">
 
 		<div id="main">
