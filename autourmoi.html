@@ -66,19 +66,13 @@
 
 		<div id="main">
 
-			<header id="site-header" data-midnight="dark-background"> 
+			<header id="site-header" data-midnight="dark-background">
 				<div class="relative-inner">
 
 					<h1 id="brand">
 						<a href="index.html" title="Accueil"><img src="./images/homePage/logo_blanc.png" style="width:47.5%"></a>
 					</h1>
-					<h1 id="brand">
-						<a href="#"  class="btn-square bold"  style="margin-left:40px;top:435px;background-color: #58FA82;" onClick="panToMe()" title="Accueil">Localisez moi</a>
-					</h1>
-					<h1 id="brand">
-						<a href="#"  class="btn-square bold"  style="margin-left:80px;top:280px;background-color: #58ACFA;" onClick="drawParcours()" title="Accueil"> afficher parcours</a>
-					</h1>
-					
+
 					<nav class="sharer hidden-xs" >
 				<h4>Partagez</a></h4>
 				<div class="links">
@@ -107,11 +101,11 @@
 							<header class="main-nav">
 								<ul class="unstyled">
 									<li><a href="rechercherOeuvres.html" data-pjax title="Épisodes">Trouver un voyage</a></li>
-									<li><a href="nosMeilleursTrip.html" data-pjax title="Épisodes">Voir les meilleurs trips</a></li>
+									<li><a href="" data-pjax title="Épisodes">Voir les meilleurs trips</a></li>
 									<li><a href="autourmoi.html" data-pjax title="Autour de moi">Autour de moi</a></li>
-									<li><a href="#" data-pjax title="Musique">Vu recemment</a></li>
+									<li><a href="" data-pjax title="Musique">Vu recemment</a></li>
 									<li><a href="parcours.html" data-pjax title="cineTrip">Créer un parcours</a></li>
-									<li><a href="parcoursEnregistres.html" data-pjax title="cineTrip">Mes parcours</a><h5 class="mono gold">1 parcours</h5></li>
+									<li><a href="" data-pjax title="cineTrip">Mes parcours</a><h5 class="mono gold">1 parcours</h5></li>
 								</ul>
 							</header>
 
@@ -133,10 +127,25 @@
 						</div>
 					</div>
 
-				</div> 
-			</nav> 
-
+				</div>
+			</nav>
 			
+			<header>
+			<table>
+				<tr>
+				<td>
+					<a href="#"  class="btn-square bold"  style="background-color: #58FA82;" onClick="panToMe()" title="Accueil">Localisez moi</a>
+				</td>
+				<td>
+					<a href="#"  class="btn-square bold"  style="background-color: #58ACFA;" onClick="drawParcours()" title="Accueil"> afficher parcours</a>
+				</td>
+				</tr>
+			</table>
+				
+				
+			</header>
+
+
 			<div id="map-canvas"></div>
 			<div id="page-loader">
 				<div class="relative-inner">
@@ -156,7 +165,6 @@
 		<script type="text/javascript" src="static/CACHE/js/fc008b63f2dd.js"></script>
 
 	</body>
-	
 </html>
 
 <!-- Localized -->
