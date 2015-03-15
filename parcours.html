@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <script type="text/javascript"
+  <script type="text/javascript">
   $(document).ready(function(){
   //Check if the current URL contains '#'
   if(document.URL.indexOf("#")==-1){
@@ -19,24 +19,15 @@
     </style>
 
     <script type="text/javascript"
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCB5J2rXIbNOzLT6svmc4AI4dKAt5qmmk">
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCB5J2rXIbNOzLT6svmc4AI4dKAt5qmmk">
     </script>
 
     <script type="text/javascript"
-    src="parcours.js">
-
+		src="parcours.js">
     </script>
 
   </head>
   <body>
-    <label for="txtlat">Latitude :</label>
-    <input type="text" name="txtlat" id="txtlat" />
-    <label for="txtlong">Longitude :</label>
-    <input type="text" name="txtlong" id="txtlong" />
-    <button onClick="move()"> go ! </button>
-    <button onClick="geolocaliseUser()"> find me ! </button>
-    <button onClick="nearMe(4000)"> autour de moi ! </button>
-    <button onClick="drawParcours()"> afficher parcours </button>
     <div id="map-canvas"></div>
   </body>
 </html>
