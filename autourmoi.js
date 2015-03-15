@@ -340,19 +340,24 @@
   }
 
   function successCallback(position){
-    map.panTo(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+    //map.panTo(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
     marqueur_myPos.setPosition(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
     marqueur_myPos.setMap(map);
-    setTimeout("map.setZoom(12)", 1000);
+    //setTimeout("map.setZoom(12)", 1000);
     if(!localise){localise=true;
       nearMe(50);}
   }
 
+    function panToMe(){
+		map.panTo(new google.maps.LatLng(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng()));
+		setTimeout("map.setZoom(6)", 1000);
+	}
+  
   function geolocaliseUser(){
     if (navigator.geolocation)
       var watchId = navigator.geolocation.watchPosition(successCallback, null, {enableHighAccuracy:true});
     else
-      alert("Votre navigateur ne prend pas en compte la g�olocalisation HTML5");
+      alert("Votre navigateur ne prend pas en compte la geolocalisation HTML5");
   }
 
   google.maps.event.addDomListener(window, 'load', initialize);
