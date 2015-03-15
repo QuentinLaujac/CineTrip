@@ -4,6 +4,7 @@
   var marqueurs_nearMe = [];
   var marqueur_myPos;
   var parcours = [];
+  var infoPopups = [];
   // var lat = marqueur_myPos.getPosition().lat();
   // var lng = marqueur_myPos.getPosition().lng();
 
@@ -51,7 +52,7 @@
             'ceci est un test !'+
             'bididoudidididaksdfiejvbidadidoubidididam '+
             'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(42.713537, 17.971721)">Ajouter au parcours</a> '+
+            '<a href="#" onClick="addToPath(42.713537, 17.971721);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw0 = new google.maps.InfoWindow({
@@ -59,8 +60,13 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i0], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw0.open(map, marqueurs_nearMe[i0]);
       });
+	  
+	  infoPopups.push(iw0);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 55.244390, -6.368876) < dist_km){
@@ -81,7 +87,7 @@
             'ceci est un test !'+
             'bididoudidididaksdfiejvbidadidoubidididam '+
             'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(55.244390, -6.368876)">Ajouter au parcours</a> '+
+            '<a href="#" onClick="addToPath(55.244390, -6.368876);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw1 = new google.maps.InfoWindow({
@@ -89,8 +95,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i1], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw1.open(map, marqueurs_nearMe[i1]);
       });
+	  infoPopups.push(iw1);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 55.210863, -6.579595) < dist_km){
@@ -111,7 +121,7 @@
             'ceci est un test !'+
             'bididoudidididaksdfiejvbidadidoubidididam '+
             'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(55.210863, -6.579595)">Ajouter au parcours</a> '+
+            '<a href="#" onClick="addToPath(55.210863, -6.579595);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw2 = new google.maps.InfoWindow({
@@ -119,8 +129,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i2], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw2.open(map, marqueurs_nearMe[i2]);
       });
+	  infoPopups.push(iw2);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 31.509912, -9.774515) < dist_km){
@@ -141,7 +155,7 @@
             'ceci est un test !'+
             'bididoudidididaksdfiejvbidadidoubidididam '+
             'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(31.509912, -9.774515)">Ajouter au parcours</a> '+
+            '<a href="#" onClick="addToPath(31.509912, -9.774515);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw3 = new google.maps.InfoWindow({
@@ -149,8 +163,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i3], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw3.open(map, marqueurs_nearMe[i3]);
       });
+	  infoPopups.push(iw3);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 50.482566, 2.554207) < dist_km){
@@ -171,7 +189,7 @@
             'ceci est un test !'+
             'bididoudidididaksdfiejvbidadidoubidididam '+
             'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(50.482566, 2.554207)">Ajouter au parcours</a> '+
+            '<a href="#" onClick="addToPath(50.482566, 2.554207);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw4 = new google.maps.InfoWindow({
@@ -179,8 +197,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i4], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw4.open(map, marqueurs_nearMe[i4]);
       });
+	  infoPopups.push(iw4);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 50.638125, 3.063989) < dist_km){
@@ -201,7 +223,7 @@
             'ceci est un test !'+
             'bididoudidididaksdfiejvbidadidoubidididam '+
             'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(50.638125, 3.063989)">Ajouter au parcours</a> '+
+            '<a href="#" onClick="addToPath(50.638125, 3.063989);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw5 = new google.maps.InfoWindow({
@@ -209,8 +231,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i5], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw5.open(map, marqueurs_nearMe[i5]);
       });
+	  infoPopups.push(iw5);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 51.05, 2.36667) < dist_km){
@@ -232,7 +258,7 @@
             'ceci est un test !'+
             'bididoudidididaksdfiejvbidadidoubidididam '+
             'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(51.05, 2.36667)">Ajouter au parcours</a> '+
+            '<a href="#" onClick="addToPath(51.05, 2.36667);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw6 = new google.maps.InfoWindow({
@@ -240,8 +266,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i6], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw6.open(map, marqueurs_nearMe[i6]);
       });
+	  infoPopups.push(iw6);
     }
   }
 
@@ -269,16 +299,21 @@
               'ceci est un test !'+
               'bididoudidididaksdfiejvbidadidoubidididam '+
               'bididoudidididaksdfiejvbidadidoubidididam '+
-              '<a href="#" onClick="drawParcours()">Tracer le parcours</a>'+
+              '<a href="#" onClick="drawParcours();for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Tracer le parcours</a>'+
               '</div>'+
               '</div>';
-    infowindow = new google.maps.InfoWindow({
+    var iw7 = new google.maps.InfoWindow({
         content: contentString
     });
 
     google.maps.event.addListener(marqueur_myPos, 'click', function() {
-      infowindow.open(map, marqueur_myPos);
+		for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
+      iw7.open(map, marqueur_myPos);
     });
+	infoPopups.push(iw7);
+	
     geolocaliseUser();
   }
 
