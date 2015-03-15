@@ -38,20 +38,16 @@
       marqueurs_nearMe.push(new google.maps.Marker({
                     position: new google.maps.LatLng(42.713537, 17.971721),
                     map: map,
-                    title: 'All�e de l\'arboretum'
+                    title: 'Allee de l\'arboretum'
                   }));
 
       var cs0 = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Moi</h1>'+
+            '<h1 id="firstHeading" class="firstHeading">Game of Thrones</h1>'+
             '<div id="bodyContent">'+
-            '<p><b>All�e de l\'arboretum</b>. ' +
-            'Coucou les amiiiiiiiis !!! '+
-            'ceci est un test !'+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(42.713537, 17.971721)">Ajouter au parcours</a> '+
+            '<p><b>Allee de l\'arboretum</b></p>' +
+            '<a href="#" onClick="addToPath(42.713537, 17.971721);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw0 = new google.maps.InfoWindow({
@@ -59,8 +55,13 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i0], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw0.open(map, marqueurs_nearMe[i0]);
       });
+	  
+	  infoPopups.push(iw0);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 55.244390, -6.368876) < dist_km){
@@ -74,14 +75,10 @@
       var cs1 = '<div id="content1">'+
             '<div id="siteNotice1">'+
             '</div>'+
-            '<h1 id="firstHeading1" class="firstHeading">Moi</h1>'+
+            '<h1 id="firstHeading1" class="firstHeading">Game of Thrones</h1>'+
             '<div id="bodyContent1">'+
-            '<p><b>Moi</b>, also referred to as <b>Nheon</b>. ' +
-            'Coucou les amiiiiiiiis !!! '+
-            'ceci est un test !'+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(55.244390, -6.368876)">Ajouter au parcours</a> '+
+            '<p><b>Port Ballintoy</b></p>' +
+            '<a href="#" onClick="addToPath(55.244390, -6.368876);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw1 = new google.maps.InfoWindow({
@@ -89,8 +86,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i1], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw1.open(map, marqueurs_nearMe[i1]);
       });
+	  infoPopups.push(iw1);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 55.210863, -6.579595) < dist_km){
@@ -98,20 +99,16 @@
       marqueurs_nearMe.push(new google.maps.Marker({
                     position: new google.maps.LatLng(55.210863, -6.579595),
                     map: map,
-                    title: 'Ch�teau Greyjoy'
+                    title: 'Chateau Greyjoy'
                   }));
 
       var cs2 = '<div id="content2">'+
             '<div id="siteNotice2">'+
             '</div>'+
-            '<h1 id="firstHeading2" class="firstHeading">Moi</h1>'+
+            '<h1 id="firstHeading2" class="firstHeading">Game of Thrones</h1>'+
             '<div id="bodyContent2">'+
-            '<p><b>Moi</b>, also referred to as <b>Nheon</b>. ' +
-            'Coucou les amiiiiiiiis !!! '+
-            'ceci est un test !'+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(55.210863, -6.579595)">Ajouter au parcours</a> '+
+            '<p><b>Chateau Greyjoy</b></p>' +
+            '<a href="#" onClick="addToPath(55.210863, -6.579595);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw2 = new google.maps.InfoWindow({
@@ -119,8 +116,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i2], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw2.open(map, marqueurs_nearMe[i2]);
       });
+	  infoPopups.push(iw2);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 31.509912, -9.774515) < dist_km){
@@ -128,20 +129,16 @@
       marqueurs_nearMe.push(new google.maps.Marker({
                     position: new google.maps.LatLng(31.509912, -9.774515),
                     map: map,
-                    title: 'Jet�e du port d\'Essaouira'
+                    title: 'Jetee du port d\'Essaouira'
                   }));
 
       var cs3 = '<div id="content3">'+
             '<div id="siteNotice3">'+
             '</div>'+
-            '<h1 id="firstHeading3" class="firstHeading">Moi</h1>'+
+            '<h1 id="firstHeading3" class="firstHeading">Game of Thrones</h1>'+
             '<div id="bodyContent3">'+
-            '<p><b>Moi</b>, also referred to as <b>Nheon</b>. ' +
-            'Coucou les amiiiiiiiis !!! '+
-            'ceci est un test !'+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(31.509912, -9.774515)">Ajouter au parcours</a> '+
+            '<p><b>Jetee du port d\'Essaouira</b></p>' +
+            '<a href="#" onClick="addToPath(31.509912, -9.774515);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw3 = new google.maps.InfoWindow({
@@ -149,8 +146,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i3], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw3.open(map, marqueurs_nearMe[i3]);
       });
+	  infoPopups.push(iw3);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 50.482566, 2.554207) < dist_km){
@@ -164,14 +165,10 @@
       var cs4 = '<div id="content4">'+
             '<div id="siteNotice4">'+
             '</div>'+
-            '<h1 id="firstHeading4" class="firstHeading">Moi</h1>'+
+            '<h1 id="firstHeading4" class="firstHeading">Bienvenue chez les ch\'tis</h1>'+
             '<div id="bodyContent4">'+
-            '<p><b>Moi</b>, also referred to as <b>Nheon</b>. ' +
-            'Coucou les amiiiiiiiis !!! '+
-            'ceci est un test !'+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(50.482566, 2.554207)">Ajouter au parcours</a> '+
+            '<p><b>Bruay la buissiere</b></p>' +
+            '<a href="#" onClick="addToPath(50.482566, 2.554207);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw4 = new google.maps.InfoWindow({
@@ -179,8 +176,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i4], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw4.open(map, marqueurs_nearMe[i4]);
       });
+	  infoPopups.push(iw4);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 50.638125, 3.063989) < dist_km){
@@ -188,20 +189,16 @@
       marqueurs_nearMe.push(new google.maps.Marker({
                     position: new google.maps.LatLng(50.638125, 3.063989),
                     map: map,
-                    title: 'Sc�ne du restaurant Bar Morel et Fils'
+                    title: 'Scene du restaurant Bar Morel et Fils'
                   }));
 
       var cs5 = '<div id="content5">'+
             '<div id="siteNotice5">'+
             '</div>'+
-            '<h1 id="firstHeading5" class="firstHeading">Moi</h1>'+
+            '<h1 id="firstHeading5" class="firstHeading">Bienvenue chez les ch\'tis</h1>'+
             '<div id="bodyContent5">'+
-            '<p><b>Moi</b>, also referred to as <b>Nheon</b>. ' +
-            'Coucou les amiiiiiiiis !!! '+
-            'ceci est un test !'+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(50.638125, 3.063989)">Ajouter au parcours</a> '+
+            '<p><b>Scene du restaurant Bar Morel et Fils</b></p>' +
+            '<a href="#" onClick="addToPath(50.638125, 3.063989);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw5 = new google.maps.InfoWindow({
@@ -209,8 +206,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i5], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw5.open(map, marqueurs_nearMe[i5]);
       });
+	  infoPopups.push(iw5);
     }
 
     if(DistanceBetweenKM(marqueur_myPos.getPosition().lat(), marqueur_myPos.getPosition().lng(), 51.05, 2.36667) < dist_km){
@@ -218,21 +219,17 @@
       marqueurs_nearMe.push(new google.maps.Marker({
                     position: new google.maps.LatLng(51.05, 2.36667),
                     map: map,
-                    title: 'Sc�ne du pipi'
+                    title: 'Scene du pipi'
                   }));
 
 
       var cs6 = '<div id="content6">'+
             '<div id="siteNotice6">'+
             '</div>'+
-            '<h1 id="firstHeading6" class="firstHeading">Moi</h1>'+
+            '<h1 id="firstHeading6" class="firstHeading">Bienvenue chez les ch\'tis</h1>'+
             '<div id="bodyContent6">'+
-            '<p><b>Moi</b>, also referred to as <b>Nheon</b>. ' +
-            'Coucou les amiiiiiiiis !!! '+
-            'ceci est un test !'+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            'bididoudidididaksdfiejvbidadidoubidididam '+
-            '<a href="#" onClick="addToPath(51.05, 2.36667)">Ajouter au parcours</a> '+
+            '<p><b>Scene du pipi</b></p>' +
+            '<a href="#" onClick="addToPath(51.05, 2.36667);for(var i = 0; i != infoPopups.length; ++i){infoPopups[i].close();}">Ajouter au parcours</a> '+
             '</div>'+
             '</div>';
       var iw6 = new google.maps.InfoWindow({
@@ -240,8 +237,12 @@
       });
 
       google.maps.event.addListener(marqueurs_nearMe[i6], 'click', function() {
+		  for(var i = 0; i != infoPopups.length; ++i){
+			  infoPopups[i].close();
+		  }
         iw6.open(map, marqueurs_nearMe[i6]);
       });
+	  infoPopups.push(iw6);
     }
   }
 
@@ -264,12 +265,7 @@
               '</div>'+
               '<h1 id="firstHeading7" class="firstHeading">Moi</h1>'+
               '<div id="bodyContent7">'+
-              '<p><b>Moi</b>, also referred to as <b>Nheon</b>. ' +
-              'Coucou les amiiiiiiiis !!! '+
-              'ceci est un test !'+
-              'bididoudidididaksdfiejvbidadidoubidididam '+
-              'bididoudidididaksdfiejvbidadidoubidididam '+
-              'bididoudidididaksdfiejvbidadidoubidididam '+
+              '<p><b>Ma position</b></p>' +
               '</div>'+
               '</div>';
     infowindow = new google.maps.InfoWindow({
